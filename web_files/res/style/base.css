@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    background-color: lightgray;
+}
+
+h1{
+    text-align: center;
+    margin: 5px;
+    color: white;
+    font: 16px Arial;
+    font-weight: bold;
+}
+
+.graph-box{
+    margin: 20px 10%;
+    width: 80%;
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+
+#notice{
+    text-align: center;
+    color: white;
+    font: 14px Arial;
+    font-weight: bold;
+}
