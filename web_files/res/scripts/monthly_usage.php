@@ -19,6 +19,10 @@ for($i = 1; $i < date('m'); $i++){
     $sql .= " OR (`timestamp` BETWEEN '$date 23:59:00' AND '$date 23:59:59')";
 }
 
+$min_ago = date('Y-m-d H:i:s', strtotime('1 minute ago'));
+$now = date('Y-m-d H:i:s');
+$sql .= " OR (`timestamp` BETWEEN '$min_ago' AND '$now')";
+
 // If there is an error with the query, disconnect
 if (!$result = $mysqli->query($sql)) {
     echo('ERROR EXECUTING QUERY<br>');
