@@ -1,7 +1,7 @@
 <?php
 
 // Connect to the MySQL database
-$mysqli = new mysqli('home.jaspersijgers.nl', 'smartmeter', '', 'smartmeter');
+$mysqli = new mysqli('127.0.0.1', 'smartmeter', '', 'smartmeter');
 
 // If there is an error, disconnect
 if ($mysqli->connect_errno) {

@@ -1,7 +1,7 @@
 <?php
 
 // Connect to the MySQL database
-$mysqli = new mysqli('home.jaspersijgers.nl', 'smartmeter', '', 'smartmeter');
+$mysqli = new mysqli('127.0.0.1', 'smartmeter', '', 'smartmeter');
 
 // If there is an error, disconnect
 if ($mysqli->connect_errno) {
@@ -14,7 +14,10 @@ $yesterday = date('Y-m-d', strtotime('yesterday'));
 
 $sql = "SELECT timestamp, verbr_laag, verbr_hoog FROM `data` WHERE (`timestamp` BETWEEN '$yesterday 23:59:00' AND '$yesterday 23:59:59')";
 
-for($i = 1; $i < date('w') + 1; $i++){
+$weekday = date('w');
+if($weekday == 0) $weekday = 7;
+
+for($i = 2; $i < $weekday + 1; $i++){
     $date = date('Y-m-d', strtotime('-' . $i . ' days'));
     $sql .= " OR (`timestamp` BETWEEN '$date 23:59:00' AND '$date 23:59:59')";
 }
