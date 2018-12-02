@@ -1,16 +1,25 @@
-$(document).ready(function(){
+$(document).ready(function () {
+    $('.btn').click(function(e){
+        e.preventDefault();
+        $('button').removeClass('btn-info').addClass('btn-default');
+        $(this).removeClass('btn-default').addClass('btn-info');
+        handleMenuAction(this.innerHTML);
+    });
+
     setDateInfo();
-    getData(true, true, true, true);
-    
-    setInterval(updateData, 60 * 1000);
-    
+    $('#menu-ul li button')[0].click();
 });
 
-function updateData(){
-    if(new Date().getMinutes() % 15 === 1){
-        getData(true, true, false, false);
+function handleMenuAction(new_item){
+    // Hide and show the correct content containers (div & canvas)
+    if(new_item === 'Meterstanden'){
+        $('#overview').css('display', 'inherit');
+        $('#chart').css('display', 'none');
     }
     else{
-        getData(true, false, false, false);
+        $('#overview').css('display', 'none');
+        $('#chart').css('display', 'inherit');
+
+        generateGraph(new_item);
     }
 }

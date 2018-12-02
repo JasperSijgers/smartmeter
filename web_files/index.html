@@ -1,51 +1,57 @@
-<html>
+<!DOCTYPE html>
 
-<head>
-    <!-- Set the page title -->
-    <title>SmartMeter Energy Monitor</title>
-    
-    <!-- Link to the required stylesheets -->
-    <link href="res/style/base.css" rel="stylesheet" />
-    
-    <!-- Include the required libraries (jQuery and Chart.js) -->
-    <script src="res/lib/jquery-3.2.1.min.js"></script>
-    <script src="res/lib/Chart.bundle.min.js"></script>
-    
-    <!-- Add the custom scripts -->
-    <script src="res/js/base.js"></script>
-    <script src="res/js/graphs.js"></script>
-</head>
+<html lang="en">
 
-<body>
+    <head>
+        <title>SmartMeter v2</title>
 
-<div class="container">
-    <!-- Hourly Energy Consumption Chart -->
-    <div class="graph-box">
-        <h1>Hourly Energy Consumption</h1>
-        <canvas class="graph" id="graph-hourly" width="4px" height="1px"></canvas>
-    </div>
+        <link href="./res/style/base.css" rel="stylesheet" type="text/css">
+        <link href="./res/style/menu.css" rel="stylesheet" type="text/css">
+        <link href="./res/style/btn.css" rel="stylesheet" type="text/css">
+        <link href="./res/style/footer.css" rel="stylesheet" type="text/css">
+        <link href="./res/style/chart.css" rel="stylesheet" type="text/css">
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+        <script src="./res/js/chart.js"></script>
+        
+        <script src="./res/js/base.js"></script>
+        <script src="./res/js/graph.js"></script>
+    </head>
 
-    <!-- Daily Energy Consumption Chart -->
-    <div class="graph-box">
-        <h1>Daily Energy Consumption</h1>
-        <canvas class="graph" id="graph-daily" width="4px" height="1px"></canvas>
-    </div>
-
-    <!-- Weekly Energy Consumption Chart -->
-    <div class="graph-box">
-        <h1>Weekly Energy Consumption</h1>
-        <canvas class="graph" id="graph-weekly" width="4px" height="1px"></canvas>
-    </div>
-
-    <!-- Monthly Energy Consumption Chart -->
-    <div class="graph-box">
-        <h1>Monthly Energy Consumption</h1>
-        <canvas class="graph" id="graph-monthly" width="4px" height="1px"></canvas>
-    </div>
-    
-    <p id="notice">Informatie op deze pagina wordt automatisch herladen wanneer er nieuwe informatie beschikbaar is. De pagina herladen is daarom niet nodig.</p>
-</div>
-
-</body>
+    <body>
+        
+        <nav>
+            <ul id="menu-ul">
+                <li>
+                    <button class="btn btn-default">Meterstanden</button>
+                </li>
+                <li>
+                    <button class="btn btn-default">1 Uur</button>
+                </li>
+                <li>
+                    <button class="btn btn-default">24 Uur</button>
+                </li>
+                <li>
+                    <button class="btn btn-default">7 Dagen</button>
+                </li>
+                <li>
+                    <button class="btn btn-default">1 Jaar</button>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="container">
+            <div id="content">
+                <canvas id="chart"></canvas>
+                <div id="overview"></div>
+            </div>
+        </div>
+        
+        <footer>
+            <p id="copyright">&copy; 2018 | <a href="https://www.jaspersijgers.nl/">Jasper Sijgers</a></p>
+            <p id="version">Version 2.0.1</p>
+        </footer>
+        
+    </body>
 
 </html>

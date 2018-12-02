@@ -1,26 +1,19 @@
 body{
     margin: 0;
-    background-color: lightgray;
+    font: 14px 'Hind Vadodara', sans-serif;
 }
 
-h1{
-    text-align: center;
-    margin: 5px;
-    color: white;
-    font: 16px Arial;
-    font-weight: bold;
+html, body{
+    height: 100%;
 }
 
-.graph-box{
-    margin: 20px 10%;
-    width: 80%;
-    border: 2px solid white;
-    box-sizing: border-box;
+a, a:hover, a:active, a:visited{
+    color: inherit;
+    text-decoration: inherit;
 }
 
-#notice{
-    text-align: center;
-    color: white;
-    font: 14px Arial;
-    font-weight: bold;
+.container{
+    height: calc(100% - 140px);
+    width: 100%;
+    position: relative;
 }
