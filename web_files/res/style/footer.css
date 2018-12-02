@@ -1,0 +1,19 @@
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #31B0D5;
+    color: white;
+}
+
+footer p{
+    margin: 5px 0;
+}
+
+#copyright{
+    font-weight: bold;
+}
+
+#version{
+    font-size: 12px;
+}
