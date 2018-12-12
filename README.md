@@ -14,6 +14,3 @@ The web_files includes a simple overview of both consumed and produced electrici
 ## Setup
 Connect the Raspberry Pi to the smart meter using the cable, download the pi_files and upload them to the raspberry pi. Install php, python and the appropriate libraries for python. Then set up a cronjob for the php script to run on the desired interval.
 Note: I have found 1 minute to work perfectly fine as an interval, depending on the time it takes for the Pi to retrieve and upload the data, you may need to adjust. A minimum of 20s and a maximum of 5 minutes provides the most accurate and usable data.
-
-I suggest: 
-* * * * * sudo php /home/pi/logcurrent.php
